@@ -14,4 +14,5 @@ use Illuminate\Support\Facades\Route;
 |
 */
 
-Route::get('/', [JobController::class, 'index']);
+Route::get('/', [JobController::class, 'index'])->name('jobs.index');
+Route::get('/{job}', [JobController::class, 'show'])->name('jobs.show');
